@@ -1,6 +1,6 @@
 {
   "name": "??PACKAGE??",
-  "version": "1.0.0",
+  "version": "??VERSION??",
   "description": "??PACKAGE_DESCRIPTION??",
   "main": "build/??PACKAGE??.js",
   "main݂Min": "build/??PACKAGE??.min.js",

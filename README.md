@@ -4,7 +4,8 @@ Replace the following variables in the files:
 * `??AUTHOR??`
 * `??PACKAGE??`
 * `??PACKAGE_DESCRIPTION??`
+* `??VERSION??`
 * `??NAMESPACE??`
 * `??DOC_MODULE??`
 
-(This README.md file will be overriden by `npm run doc` script)
+(This README.md file will be overridden by `npm run doc` script)
