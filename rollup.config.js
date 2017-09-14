@@ -40,7 +40,7 @@ const external = Object.keys(pkg.dependencies);
 const input = 'src/main.js';
 const name = '??NAMESPACE??';
 const format = 'umd';
-const sourcemap = isProduction ? false : 'inline';
+const sourcemap = !isProduction && 'inline';
 const plugins = [babel(babelrc({ path: 'babelrc.json' }))];
 
 // browser-friendly UMD build
