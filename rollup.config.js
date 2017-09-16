@@ -5,6 +5,7 @@ import uglify from 'rollup-plugin-uglify';
 import pkg from './package.json';
 
 const isProduction = process.env.BUILD === 'production';
+const isDebug = process.env.BUILD === 'debug';
 const banner = isProduction
   ? '/**\n' +
     '* @file ??PACKAGE_DESCRIPTION??\n' +
@@ -40,7 +41,7 @@ const external = Object.keys(pkg.dependencies);
 const input = 'src/main.js';
 const name = '??NAMESPACE??';
 const format = 'umd';
-const sourcemap = !isProduction && 'inline';
+const sourcemap = !isProduction;
 const plugins = [babel(babelrc({ path: 'babelrc.json' }))];
 
 // browser-friendly UMD build
@@ -86,7 +87,7 @@ if (isProduction) {
     name,
     banner
   });
-} else {
+} else if (!isDebug) {
   targets[0].plugins.push(
     istanbul({
       exclude: ['test/**/*', 'node_modules/**/*']
