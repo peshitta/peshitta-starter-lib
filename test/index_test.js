@@ -1,2 +1,2 @@
-import * as test from 'assert';
-import * as sut from '../build/??PACKAGE??';
+const test = require('assert');
+const sut = require('../build/??PACKAGE??');

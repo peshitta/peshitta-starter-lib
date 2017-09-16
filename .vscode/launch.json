@@ -13,8 +13,6 @@
           "999999",
           "--colors",
           "--recursive",
-          "--require",
-          "babel-register",
           "${workspaceRoot}/test"
         ],
         "internalConsoleOptions": "openOnSessionStart"

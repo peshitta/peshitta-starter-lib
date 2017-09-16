@@ -5,7 +5,7 @@ import uglify from 'rollup-plugin-uglify';
 import pkg from './package.json';
 
 const isProduction = process.env.BUILD === 'production';
-const isDebug = process.env.BUILD === 'debug';
+const isDev = process.env.BUILD === 'dev';
 const banner = isProduction
   ? '/**\n' +
     '* @file ??PACKAGE_DESCRIPTION??\n' +
@@ -87,7 +87,7 @@ if (isProduction) {
     name,
     banner
   });
-} else if (!isDebug) {
+} else if (!isDev) {
   targets[0].plugins.push(
     istanbul({
       exclude: ['test/**/*', 'node_modules/**/*']
