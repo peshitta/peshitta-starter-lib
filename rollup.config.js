@@ -41,6 +41,7 @@ const external = Object.keys(pkg.dependencies);
 const input = 'src/main.js';
 const name = '??NAMESPACE??';
 const format = 'umd';
+const globals = {};
 const sourcemap = !isProduction;
 const plugins = [babel(babelrc({ path: 'babelrc.json' }))];
 
@@ -52,6 +53,7 @@ const targets = [
     external,
     plugins: plugins.slice(0),
     name,
+    globals,
     banner,
     sourcemap
   }
@@ -85,6 +87,7 @@ if (isProduction) {
     external,
     plugins,
     name,
+    globals,
     banner
   });
 } else if (!isDev) {
