@@ -29,7 +29,7 @@
     }
   },
   "files": [
-    "build"
+    "build/*.js"
   ],
   "engines": {
     "node": ">=6.0.0"
