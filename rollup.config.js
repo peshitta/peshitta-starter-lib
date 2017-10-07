@@ -45,7 +45,7 @@ const globals = {};
 const sourcemap = !isProduction;
 const plugins = [babel(babelrc({ path: 'babelrc.json' }))];
 
-// browser-friendly UMD build
+// browser/nodejs-friendly UMD build
 const targets = [
   {
     input,
@@ -80,7 +80,7 @@ if (isProduction) {
     })
   );
 
-  // browser-friendly minified UMD build
+  // browser/nodejs-friendly minified UMD build
   targets.push({
     input,
     output: [{ file: pkg.main݂Min, format }],
