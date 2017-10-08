@@ -3,7 +3,7 @@
   "version": "??VERSION??",
   "description": "??PACKAGE_DESCRIPTION??",
   "main": "build/??PACKAGE??.js",
-  "main݂Min": "build/??PACKAGE??.min.js",
+  "mainMin": "build/??PACKAGE??.min.js",
   "module": "build/??PACKAGE??.esm.js",
   "scripts": {
     "pretest": "rollup -c",
