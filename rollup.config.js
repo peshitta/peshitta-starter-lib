@@ -1,5 +1,4 @@
-import babel from 'rollup-plugin-babel';
-import babelrc from 'babelrc-rollup';
+import buble from 'rollup-plugin-buble';
 import istanbul from 'rollup-plugin-istanbul';
 import uglify from 'rollup-plugin-uglify';
 import pkg from './package.json';
@@ -43,7 +42,7 @@ const name = '??NAMESPACE??';
 const format = 'umd';
 const globals = {};
 const sourcemap = !isProduction;
-const plugins = [babel(babelrc({ path: 'babelrc.json' }))];
+const plugins = [buble()];
 
 // browser/nodejs-friendly UMD build
 const targets = [

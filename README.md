@@ -6,6 +6,5 @@ Replace the following variables in the files:
 * `??PACKAGE_DESCRIPTION??`
 * `??VERSION??`
 * `??NAMESPACE??`
-* `??DOC_MODULE??`
 
 (This README.md file will be overridden by `npm run doc` script)
