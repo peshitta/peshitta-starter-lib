@@ -8,7 +8,7 @@ const isDev = process.env.BUILD === 'dev';
 const banner = isProduction
   ? '/**\n' +
     '* @file ??PACKAGE_DESCRIPTION??\n' +
-    '* @version 1.0.0\n' +
+    '* @version ??VERSION??\n' +
     '* @author ??AUTHOR??\n' +
     '* @copyright (c) 2017 ??AUTHOR??.\n' +
     '* @license MIT\n' +
